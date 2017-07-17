@@ -1,5 +1,11 @@
-gen/
-bin/
-doc/
-.settings/
-proguard-project.txt
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.idea
+/app/*.apk
+/app/build
