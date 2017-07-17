@@ -2,7 +2,6 @@ package arnold.cja.cah;
 
 
 import java.util.ArrayList;
-import org.acra.ACRA;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -308,7 +307,7 @@ public class LaunchActivity extends ListActivity {
 
       case R.id.reportBuggyGameState:
          Util.toast(this, "Making an error report...");
-         ACRA.getErrorReporter().handleException(null);
+         //ACRA.getErrorReporter().handleException(null);
          break;
       case R.id.settings:
          Intent intent = new Intent(this, PrefsActivity.class);

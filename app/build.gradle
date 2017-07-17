@@ -20,5 +20,4 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:18.+'
-    compile files('libs/acra-4.4.0.jar')
 }
