@@ -2,43 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
+    android:orientation="vertical">
     <TextView
         android:id="@+id/whiteforblackpreview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/White"
-		android:clickable="true"
-        android:textSize="20dp"
-        android:layout_marginTop="22dp"
         android:layout_marginBottom="22dp"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:clickable="true"
         android:ellipsize="none"
+        android:gravity="center_horizontal"
         android:maxLines="100"
         android:scrollHorizontally="false"
-        android:textStyle="bold"
-         >
-    </TextView>
-    
+        android:textColor="@color/White"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/cardczar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
         android:ellipsize="none"
         android:maxLines="100"
         android:scrollHorizontally="false"
         android:textColor="@color/Gold"
-        android:textSize="15dp"
-        android:layout_marginBottom="8dp"
-         >
-    </TextView>
-
+        android:textSize="15dp"/>
     <ListView
         android:id="@android:id/list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </ListView>
-
+        android:layout_height="wrap_content" />
 </LinearLayout>

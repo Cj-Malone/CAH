@@ -5,7 +5,7 @@
     android:paddingBottom="18dip"
     android:paddingLeft="15dip"
     android:paddingRight="15dip"
-    android:paddingTop="18dip" >
+    android:paddingTop="18dip">
 
     <TextView
         android:id="@+id/managePlayersName"
@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:clickable="false"
-        android:focusable="false"
         android:ellipsize="none"
+        android:focusable="false"
         android:maxLines="100"
         android:scrollHorizontally="false"
         android:textSize="17dp" />
@@ -25,11 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:clickable="false"
-        android:focusable="false"
         android:ellipsize="none"
+        android:focusable="false"
         android:maxLines="100"
         android:scrollHorizontally="false"
-        android:textSize="15dp"
-        android:textColor="@color/Gold" />
-
+        android:textColor="@color/Gold"
+        android:textSize="15dp" />
 </RelativeLayout>

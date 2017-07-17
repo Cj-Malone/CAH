@@ -1,43 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="arnold.cja.cah"
     android:versionCode="2"
-    android:versionName="1.1" >
+    android:versionName="1.1">
 
-     <uses-sdk
+    <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="14" />
-    
     <application
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:allowBackup="true"
         android:theme="@style/noAnimTheme">
         <activity
             android:name="arnold.cja.cah.LaunchActivity"
             android:alwaysRetainTaskState="true"
-            android:launchMode="singleTop"
             android:configChanges="orientation|keyboard"
-            android:label="CAH" >
+            android:label="CAH"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity android:name="arnold.cja.cah.SelectRoundWinnerActivity" android:label="Select Round Winner" />
-        <activity android:name="arnold.cja.cah.ViewAllCardSetsActivity" android:label="View Cardsets" />
+        <activity
+            android:name="arnold.cja.cah.SelectRoundWinnerActivity"
+            android:label="Select Round Winner" />
+        <activity
+            android:name="arnold.cja.cah.ViewAllCardSetsActivity"
+            android:label="View Cardsets" />
         <activity android:name="arnold.cja.cah.ViewCardSetActivity" />
-        <activity android:name="arnold.cja.cah.SelectWhiteActivity" android:label="Play White Cards" />                
-        <activity android:name="arnold.cja.cah.SelectNextPlayerActivity" android:label="Select Next Player"/>
-        <activity android:name="arnold.cja.cah.ManagePlayersActivity" android:label="Manage Players"/>
-        <activity android:name="arnold.cja.cah.AddPlayerActivity" android:label="Add Player"
-                  android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="arnold.cja.cah.SelectWhiteActivity"
+            android:label="Play White Cards" />
+        <activity
+            android:name="arnold.cja.cah.SelectNextPlayerActivity"
+            android:label="Select Next Player" />
+        <activity
+            android:name="arnold.cja.cah.ManagePlayersActivity"
+            android:label="Manage Players" />
+        <activity
+            android:name="arnold.cja.cah.AddPlayerActivity"
+            android:label="Add Player"
+            android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="arnold.cja.cah.PrefsActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar"  >
-            
-        </activity>
-        
-</application>
-
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+    </application>
 </manifest>

@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    
+    android:orientation="vertical">
+
     <LinearLayout
         android:id="@+id/edit_and_chk"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/playername"
@@ -17,7 +18,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:hint="@string/player_name_hint"      
+            android:hint="@string/player_name_hint"
             android:inputType="textCapSentences" />
 
         <CheckBox
@@ -30,26 +31,23 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"             
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-         <Button
+        <Button
             android:id="@+id/CancelAddPlayer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="CancelAddPlayer"
             android:text="@string/cancel" />
-         
+
         <Button
             android:id="@+id/OKAddPlayer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="OKAddPlayer"
-            android:text="@string/ok" >
-        </Button>
-        
+            android:text="@string/ok" />
     </LinearLayout>
-
 </LinearLayout>

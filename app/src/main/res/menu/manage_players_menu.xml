@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/add_player"
-        android:title="Add Player"
         android:icon="@drawable/add_person"
-        android:showAsAction="ifRoom"/>
+        android:showAsAction="ifRoom"
+        android:title="Add Player" />
 </menu>

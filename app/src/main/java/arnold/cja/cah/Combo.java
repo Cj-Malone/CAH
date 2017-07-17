@@ -1,9 +1,10 @@
 package arnold.cja.cah;
 
+import android.text.Html;
+
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
-import android.text.Html;
 
 /**
  * A container to hold a single black card and 0 or more
@@ -13,85 +14,90 @@ import android.text.Html;
  */
 public class Combo implements java.io.Serializable {
 
-   private static final long serialVersionUID = 1;
+    private static final long serialVersionUID = 1;
 
-   private Card    mBlackCard;
-   private CardSet mWhiteCards;
-   private Player  mPlayer;
+    private Card mBlackCard;
+    private CardSet mWhiteCards;
+    private Player mPlayer;
 
-   public Combo(Card blackCard, Player player) {
-      mBlackCard = blackCard;
-      mWhiteCards = new CardSet();
-      mPlayer = player;
-   }
+    public Combo(Card blackCard, Player player) {
+        mBlackCard = blackCard;
+        mWhiteCards = new CardSet();
+        mPlayer = player;
+    }
 
-   // When serializing to file, a copy of the game state is made and
-   // given to a background thread.  Certain objects need a deep copy while
-   // some (CardSet) only require a shallow copy. 
-   public Combo(Combo other, Player player) {	
-      // TODO: is this ok since we are referencing a reference to the old black card
-      mBlackCard = other.mBlackCard;
-      mWhiteCards = new CardSet(other.mWhiteCards);
-      mPlayer = player;
-   }
+    // When serializing to file, a copy of the game state is made and
+    // given to a background thread.  Certain objects need a deep copy while
+    // some (CardSet) only require a shallow copy.
+    public Combo(Combo other, Player player) {
+        // TODO: is this ok since we are referencing a reference to the old black card
+        mBlackCard = other.mBlackCard;
+        mWhiteCards = new CardSet(other.mWhiteCards);
+        mPlayer = player;
+    }
 
-   public boolean empty() {
-      return mWhiteCards.empty();
-   }
+    // In an attempt to speed up serialization, I tried using Externalizable
+    // and implementing readExternal and writeExternal for each object.
+    // Testing showed no improvement whatsoever over default serialization!?
+    // Keeping this here for now in case I come back to it.
+    public Combo() {
+    }
 
-   public Card getBlack() {
-      return mBlackCard;
+    public boolean empty() {
+        return mWhiteCards.empty();
+    }
 
-   }
-   public Card popWhite() {
-      return mWhiteCards.pop();
-   }
+    public Card getBlack() {
+        return mBlackCard;
 
-   public boolean isComplete() {
-      return (mWhiteCards.size() >= mBlackCard.getRequiredWhiteCardCount());
-   }
+    }
 
-   public void addWhiteCard(Card whiteCard) {
-      mWhiteCards.add(whiteCard);
-   }
+    public Card popWhite() {
+        return mWhiteCards.pop();
+    }
 
-   public Player getPlayer() { return mPlayer; }
+    public boolean isComplete() {
+        return (mWhiteCards.size() >= mBlackCard.getRequiredWhiteCardCount());
+    }
 
-   public CharSequence getStyledStatement() {
+    public void addWhiteCard(Card whiteCard) {
+        mWhiteCards.add(whiteCard);
+    }
 
-      String text = new String(mBlackCard.getText());
+    public Player getPlayer() {
+        return mPlayer;
+    }
 
-      for(Card c : mWhiteCards) {
-         text = text.replaceFirst(Card.UNDERSCORES, "<font color='" + Card.UNDERSCORE_COLOR + "'>" + c.getText() + "</font>");
-      }
+    public CharSequence getStyledStatement() {
 
-      text = text.replaceAll(Card.UNDERSCORES, "<u><font color='" + Card.UNDERSCORE_COLOR + "'>" + Card.spaces + "</font></u>");
-      return Html.fromHtml(text);
-   }
+        String text = new String(mBlackCard.getText());
 
-   // Don't count the black card because it is in multiple combos
-   public int countCards() {
-      return mWhiteCards.size();
-   }
+        for (Card c : mWhiteCards) {
+            text = text.replaceFirst(Card.UNDERSCORES, "<font color='" + Card.UNDERSCORE_COLOR + "'>" + c.getText() + "</font>");
+        }
 
-   // In an attempt to speed up serialization, I tried using Externalizable
-   // and implementing readExternal and writeExternal for each object. 
-   // Testing showed no improvement whatsoever over default serialization!?
-   // Keeping this here for now in case I come back to it.
-   public Combo() { }
-   public void readExternal(ObjectInput input) throws IOException,
-   ClassNotFoundException {
-      mBlackCard = (Card)input.readObject();
-      mWhiteCards = (CardSet)input.readObject();
-      mPlayer = (Player)input.readObject();
-   }
+        text = text.replaceAll(Card.UNDERSCORES, "<u><font color='" + Card.UNDERSCORE_COLOR + "'>" + Card.spaces + "</font></u>");
+        return Html.fromHtml(text);
+    }
 
-   public void writeExternal(ObjectOutput output) throws IOException {
+    // Don't count the black card because it is in multiple combos
+    public int countCards() {
+        return mWhiteCards.size();
+    }
 
-      output.writeObject(mBlackCard);
-      output.writeObject(mWhiteCards);
-      output.writeObject(mPlayer);
-   }
+    public void readExternal(ObjectInput input) throws IOException,
+            ClassNotFoundException {
+        mBlackCard = (Card) input.readObject();
+        mWhiteCards = (CardSet) input.readObject();
+        mPlayer = (Player) input.readObject();
+    }
+
+    public void writeExternal(ObjectOutput output) throws IOException {
+
+        output.writeObject(mBlackCard);
+        output.writeObject(mWhiteCards);
+        output.writeObject(mPlayer);
+    }
 
 
 }

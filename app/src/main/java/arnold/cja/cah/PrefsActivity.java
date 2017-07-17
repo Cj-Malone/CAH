@@ -3,10 +3,10 @@ package arnold.cja.cah;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-//import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import arnold.cja.cah.R;
+
+//import android.preference.PreferenceFragment;
 
 /**
  * Change game settings
@@ -15,37 +15,39 @@ import arnold.cja.cah.R;
  */
 public class PrefsActivity extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-   private static final String TAG             = "PrefsActivity";
-   public  static final String PREF_CARD_COUNT = "cardCount";
+    public static final String PREF_CARD_COUNT = "cardCount";
+    private static final String TAG = "PrefsActivity";
 
-   @Override
-   protected void onCreate(final Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      if (!Util.constructGameManagerIfNecessary(this)) { return; }
+    @Override
+    protected void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (!Util.constructGameManagerIfNecessary(this)) {
+            return;
+        }
 
-      PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
-      addPreferencesFromResource(R.xml.prefs);
-   }
+        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
+        addPreferencesFromResource(R.xml.prefs);
+    }
 
-   public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-      if (key.compareTo(PREF_CARD_COUNT) == 0) {        	
-         String cardsDealt = sharedPreferences.getString(PREF_CARD_COUNT, "10");
-         LaunchActivity.gm.setCardsInHand(Integer.parseInt(cardsDealt));        	
-      }
-   }
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.compareTo(PREF_CARD_COUNT) == 0) {
+            String cardsDealt = sharedPreferences.getString(PREF_CARD_COUNT, "10");
+            LaunchActivity.gm.setCardsInHand(Integer.parseInt(cardsDealt));
+        }
+    }
 
-   @Override
-   protected void onPause() {
-      super.onPause();
-      Log.i(TAG, "PrefsActivity::onPause");
-      Util.saveStateIfLeavingApp(this);
-   }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "PrefsActivity::onPause");
+        Util.saveStateIfLeavingApp(this);
+    }
 
-   @Override
-   public void onBackPressed() {
-      LaunchActivity.gm.setLeavingActivity();
-      super.onBackPressed();
-   }
+    @Override
+    public void onBackPressed() {
+        LaunchActivity.gm.setLeavingActivity();
+        super.onBackPressed();
+    }
 
 }
 
