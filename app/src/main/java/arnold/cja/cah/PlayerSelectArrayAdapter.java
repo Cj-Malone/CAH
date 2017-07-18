@@ -69,11 +69,11 @@ public class PlayerSelectArrayAdapter extends ArrayAdapter<Player> {
             t1.setText(p.getName());
         }
 
-        if (!p.hasPickedWhite()) {
+        /* if (!p.hasPickedWhite()) {
             t1.setTextColor(mContext.getResources().getColor(R.color.Cyan));
         } else {
             view.setBackgroundColor(mContext.getResources().getColor(R.color.DimGray));
-        }
+        } */
 
         t2.setText(points + (points == 1 ? " point" : " points"));
 

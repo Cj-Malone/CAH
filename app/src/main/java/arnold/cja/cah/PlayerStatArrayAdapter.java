@@ -41,7 +41,6 @@ public class PlayerStatArrayAdapter extends ArrayAdapter<Player> {
             textPlayersName.setText(p.getName());
         }
 
-        textPlayersName.setTextColor(this.getContext().getResources().getColor(R.color.Cyan));
         textPlayersScore.setText(points + (points == 1 ? " point" : " points"));
 
         return view;

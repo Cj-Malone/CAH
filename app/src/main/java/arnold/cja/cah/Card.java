@@ -30,7 +30,7 @@ public class Card implements java.io.Serializable {
     /**
      * A Cyan color for the fill in the blanks
      */
-    public static final String UNDERSCORE_COLOR = "#00FFFF";
+    public static final String UNDERSCORE_COLOR = "#000000";
     /**
      * We cannot render the black card's fill in the blanks using
      * underscores because there will be a small space visible between each underscore.

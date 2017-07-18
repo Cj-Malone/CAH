@@ -16,7 +16,6 @@
         android:maxLines="100"
         android:onClick="onWhiteForBlackClick"
         android:scrollHorizontally="false"
-        android:textColor="@color/White"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -29,7 +28,6 @@
         android:layout_marginLeft="22dp"
         android:onClick="onClear"
         android:text="@string/clear"
-        android:textColor="@color/Gold"
         android:textSize="20dp" />
 
     <ListView
@@ -50,6 +48,5 @@
         android:layout_marginRight="22dp"
         android:onClick="onSubmit"
         android:text="@string/submit"
-        android:textColor="@color/Gold"
         android:textSize="20dp" />
 </RelativeLayout>

@@ -51,7 +51,6 @@
             android:focusable="false"
             android:maxLines="100"
             android:scrollHorizontally="false"
-            android:textColor="@color/Gold"
             android:textSize="12dp" />
     </RelativeLayout>
 </LinearLayout>

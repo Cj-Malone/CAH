@@ -9,5 +9,4 @@
     android:paddingRight="5dp"
     android:paddingTop="35dp"
     android:scrollHorizontally="false"
-    android:textColor="@color/White"
     android:textSize="18dp" />

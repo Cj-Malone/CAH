@@ -7,5 +7,4 @@
     android:maxLines="100"
     android:padding="40dp"
     android:scrollHorizontally="false"
-    android:textColor="@color/White"
-    android:textSize="23dp"/>
+    android:textSize="23dp" />

@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
+
     <TextView
         android:id="@+id/whiteforblackpreview"
         android:layout_width="fill_parent"
@@ -14,9 +15,9 @@
         android:gravity="center_horizontal"
         android:maxLines="100"
         android:scrollHorizontally="false"
-        android:textColor="@color/White"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/cardczar"
         android:layout_width="wrap_content"
@@ -26,8 +27,8 @@
         android:ellipsize="none"
         android:maxLines="100"
         android:scrollHorizontally="false"
-        android:textColor="@color/Gold"
-        android:textSize="15dp"/>
+        android:textSize="15dp" />
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="wrap_content"
