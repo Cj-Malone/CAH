@@ -299,13 +299,13 @@ public class LaunchActivity extends ListActivity {
             case R.id.newGame:
                 showDialog(DIALOG_NEW_GAME, null);
                 break;
-            case R.id.resetEntireGame:
+            /* case R.id.resetEntireGame:
                 Util.toast(this, "Wiping and reloading entire game...");
                 gm = new GameManager();
                 gm.setupGame(getAssets());
                 setRound();
                 Util.toast(this, "Game was wiped and reset");
-                break;
+                break; */
         }
         return true;
     }

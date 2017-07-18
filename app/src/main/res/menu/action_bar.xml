@@ -10,7 +10,7 @@
         android:icon="@drawable/settings"
         android:showAsAction="ifRoom|withText"
         android:title="@string/settings" />
-    <item
+    <!-- <item
         android:id="@+id/resetEntireGame"
-        android:title="@string/game_reset" />
+        android:title="@string/game_reset" /> -->
 </menu>
