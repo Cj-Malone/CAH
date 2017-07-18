@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/whiteforblack"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
         android:onClick="onClear"
         android:text="@string/clear"
         android:textSize="20dp" />
@@ -43,9 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/ClearCombo"
         android:layout_alignBottom="@+id/ClearCombo"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginBottom="20dp"
-        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
         android:onClick="onSubmit"
         android:text="@string/submit"
         android:textSize="20dp" />

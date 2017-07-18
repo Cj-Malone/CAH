@@ -8,15 +8,15 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingBottom="8dip"
-        android:paddingLeft="5dip"
-        android:paddingRight="15dip"
+        android:paddingStart="5dip"
+        android:paddingEnd="15dip"
         android:paddingTop="8dip">
 
         <TextView
             android:id="@+id/playerEntryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:clickable="false"
             android:ellipsize="none"
             android:focusable="false"
@@ -28,7 +28,7 @@
             android:id="@+id/playerEntryCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:clickable="false"
             android:focusable="false" />
     </RelativeLayout>
@@ -37,15 +37,15 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingBottom="8dip"
-        android:paddingLeft="5dip"
-        android:paddingRight="15dip"
+        android:paddingStart="5dip"
+        android:paddingEnd="15dip"
         android:paddingTop="8dip">
 
         <TextView
             android:id="@+id/playerEntryScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:clickable="false"
             android:ellipsize="none"
             android:focusable="false"
