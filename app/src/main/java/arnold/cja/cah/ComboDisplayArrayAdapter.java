@@ -35,5 +35,3 @@ public class ComboDisplayArrayAdapter extends ArrayAdapter<Combo> {
     }
 
 }
-
-

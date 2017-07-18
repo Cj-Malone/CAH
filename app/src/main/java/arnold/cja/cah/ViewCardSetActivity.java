@@ -84,4 +84,3 @@ public class ViewCardSetActivity extends ListActivity {
         super.onBackPressed();
     }
 }
-

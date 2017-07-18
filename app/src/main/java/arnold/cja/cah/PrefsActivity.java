@@ -50,4 +50,3 @@ public class PrefsActivity extends PreferenceActivity implements SharedPreferenc
     }
 
 }
-

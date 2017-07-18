@@ -48,4 +48,3 @@ public class PlayerStatArrayAdapter extends ArrayAdapter<Player> {
 
 
 }
-

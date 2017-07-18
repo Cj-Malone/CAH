@@ -323,4 +323,3 @@ public class LaunchActivity extends ListActivity {
         SELECT_ROUND_WINNER
     }
 }
-

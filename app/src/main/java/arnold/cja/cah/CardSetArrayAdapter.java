@@ -35,4 +35,3 @@ public class CardSetArrayAdapter extends ArrayAdapter<Card> {
     }
 
 }
-
