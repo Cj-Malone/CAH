@@ -34,8 +34,7 @@
         android:id="@android:id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ClearCombo"
-        android:layout_weight="1" />
+        android:layout_below="@id/ClearCombo" />
 
     <Button
         android:id="@+id/SubmitCombo"
