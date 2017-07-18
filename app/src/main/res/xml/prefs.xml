@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:summary="Cards"
-        android:title="Cards">
+    <PreferenceCategory android:title="@string/cards">
         <ListPreference
             android:defaultValue="10"
             android:entries="@array/cardCountOptions"
             android:entryValues="@array/cardCountValues"
             android:key="cardCount"
-            android:summary="White cards dealt per player"
-            android:title="White cards dealt" />
+            android:summary="@string/white_cards_delt_summary"
+            android:title="@string/white_cards_delt" />
     </PreferenceCategory>
 </PreferenceScreen>

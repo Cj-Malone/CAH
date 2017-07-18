@@ -7,5 +7,15 @@
     <string name="submit">Submit</string>
     <string name="player_name_hint">Player Name</string>
     <string name="ai_check_text">Is AI</string>
-    <string name="crash_toast_text">A report has been sent to the developer to help fix the issue !</string>
+    <string name="cards">Cards</string>
+    <string name="white_cards_delt">White cards dealt</string>
+    <string name="white_cards_delt_summary">White cards dealt per player</string>
+    <string name="remove_player">Remove Player</string>
+    <string name="remove_all_players">Remove All Players</string>
+    <string name="add_player">Add Player</string>
+    <string name="define_using_google">Define using Google</string>
+    <string name="define_using_urban_dictionary">Define using Urban Dictionary</string>
+    <string name="new_game">New Game</string>
+    <string name="settings">Settings</string>
+    <string name="game_reset">Game Reset</string>
 </resources>

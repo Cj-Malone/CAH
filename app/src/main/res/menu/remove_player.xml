@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/remove_player"
-        android:title="Remove Player" />
+        android:title="@string/remove_player" />
     <item
         android:id="@+id/remove_all_players"
-        android:title="Remove All Players" />
+        android:title="@string/remove_all_players" />
 </menu>

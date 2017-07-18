@@ -4,13 +4,13 @@
         android:id="@+id/newGame"
         android:icon="@drawable/new_game"
         android:showAsAction="ifRoom|withText"
-        android:title="New Game" />
+        android:title="@string/new_game" />
     <item
         android:id="@+id/settings"
         android:icon="@drawable/settings"
         android:showAsAction="ifRoom|withText"
-        android:title="Settings" />
+        android:title="@string/settings" />
     <item
         android:id="@+id/resetEntireGame"
-        android:title="Full Game Reset" />
+        android:title="@string/game_reset" />
 </menu>

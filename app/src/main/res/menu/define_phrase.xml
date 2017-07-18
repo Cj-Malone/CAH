@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/define_google"
-        android:title="Define using Google" />
+        android:title="@string/define_using_google" />
     <item
         android:id="@+id/define_ud"
-        android:title="Define using Urban Dictionary" />
+        android:title="@string/define_using_urban_dictionary" />
 </menu>
