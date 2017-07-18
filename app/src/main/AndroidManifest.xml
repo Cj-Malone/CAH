@@ -39,9 +39,7 @@
         <activity
             android:name="arnold.cja.cah.AddPlayerActivity"
             android:label="Add Player"
-            android:theme="@android:style/Theme.Dialog" />
-        <activity
-            android:name="arnold.cja.cah.PrefsActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar" />
+            android:theme="@android:style/Theme.Material.Dialog" />
+        <activity android:name="arnold.cja.cah.PrefsActivity" />
     </application>
 </manifest>
