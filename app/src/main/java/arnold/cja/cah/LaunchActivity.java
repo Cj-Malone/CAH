@@ -295,11 +295,6 @@ public class LaunchActivity extends ListActivity {
         super.onOptionsItemSelected(item);
 
         switch (item.getItemId()) {
-
-            case R.id.reportBuggyGameState:
-                Util.toast(this, "Making an error report...");
-                //ACRA.getErrorReporter().handleException(null);
-                break;
             case R.id.settings:
                 Intent intent = new Intent(this, PrefsActivity.class);
                 Util.startActivity(this, intent);

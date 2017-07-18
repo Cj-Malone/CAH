@@ -11,9 +11,6 @@
         android:showAsAction="ifRoom|withText"
         android:title="New Game" />
     <item
-        android:id="@+id/reportBuggyGameState"
-        android:title="Report Buggy Game State" />
-    <item
         android:id="@+id/resetEntireGame"
         android:title="Full Game Reset" />
 </menu>
