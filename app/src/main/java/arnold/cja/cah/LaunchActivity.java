@@ -45,7 +45,6 @@ public class LaunchActivity extends ListActivity {
     public static GameManager gm;
     private ArrayList<String> mMainMenu;
 
-    ;
     private ArrayAdapter<String> mAdapter;
 
     @Override
@@ -195,7 +194,6 @@ public class LaunchActivity extends ListActivity {
 
         if (LaunchActivity.gm.getHumanPlayerCount() < 2) {
             showDialog(DIALOG_NEED_MORE_PLAYERS, null);
-            return;
         } else if (gm.allPlayersSubmitted()) {
             alertCardCzar();
         } else {
@@ -204,7 +202,6 @@ public class LaunchActivity extends ListActivity {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 
             Util.startActivityForResult(this, intent, RequestCodes.SELECT_NEXT_PLAYER.ordinal());
-
         }
     }
 
@@ -318,7 +315,7 @@ public class LaunchActivity extends ListActivity {
         showDialog(DIALOG_EXIT, null);
     }
 
-    private static enum RequestCodes {
+    private enum RequestCodes {
         SELECT_NEXT_PLAYER,
         SELECT_ROUND_WINNER
     }

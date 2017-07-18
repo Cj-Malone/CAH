@@ -30,8 +30,8 @@ public class AddPlayerActivity extends Activity {
         this.setContentView(R.layout.add_player);
 
         LayoutParams params = getWindow().getAttributes();
-        params.width = LayoutParams.FILL_PARENT;
-        getWindow().setAttributes((android.view.WindowManager.LayoutParams) params);
+        params.width = LayoutParams.MATCH_PARENT;
+        getWindow().setAttributes(params);
 
         Util.assertGameState(this, "AddPlayerActivity::onCreate");
     }

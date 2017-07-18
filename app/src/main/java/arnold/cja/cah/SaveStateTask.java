@@ -10,11 +10,9 @@ import android.util.Log;
 public class SaveStateTask extends AsyncTask<GameManagerAndContext, Void, Long> {
 
     private static final String TAG = "SaveStateTask";
-    private Context mContext;
 
     protected Long doInBackground(GameManagerAndContext... input) {
-        mContext = input[0].mContext;
-        return Util.saveState(input[0].mGm, mContext);
+        return Util.saveState(input[0].mGm, input[0].mContext);
     }
 
     protected void onPostExecute(Long duration) {

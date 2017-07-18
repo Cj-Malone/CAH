@@ -183,7 +183,7 @@ public class ManagePlayersActivity extends ListActivity {
                 mAdapter.notifyDataSetChanged();
                 return true;
             case R.id.remove_all_players:
-                showDialog(this.DIALOG_REMOVE_ALL_PLAYERS, null);
+                showDialog(DIALOG_REMOVE_ALL_PLAYERS, null);
                 return true;
             default:
                 return false;

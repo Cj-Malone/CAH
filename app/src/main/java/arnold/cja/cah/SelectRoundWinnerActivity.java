@@ -24,7 +24,7 @@ import arnold.cja.cah.Util.StyleType;
  */
 public class SelectRoundWinnerActivity extends ListActivity {
 
-    private static final String TAG = "SelectRoundWinnerActivity";
+    private static final String TAG = "SelectRoundWinnerActivi";
     private static final int ROUND_WINNER_DIALOG = 1;
 
     private ArrayAdapter<Combo> mAdapter;

@@ -361,7 +361,6 @@ public class GameManager implements java.io.Serializable {
 
         if (getHumanPlayerCount() == 0) {
             mCardCzarIndex = -1;
-            return;
         } else {
             // there's at least one human.  If mCardCzarIndex is -1 then
             // set it to 0.
@@ -383,7 +382,6 @@ public class GameManager implements java.io.Serializable {
     public void rotateCardCzar() {
         if (getHumanPlayerCount() == 0) {
             mCardCzarIndex = -1;
-            return;
         } else {
             do {
                 mCardCzarIndex = (mCardCzarIndex + 1) % mPlayers.size();

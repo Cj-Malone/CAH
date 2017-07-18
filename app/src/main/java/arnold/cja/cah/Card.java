@@ -47,10 +47,10 @@ public class Card implements java.io.Serializable {
     private static final String TAG = "Card";
     private String mText;
 
-    ;
     private String mPhraseToDefine;
     private CardType mCardType;
     private int mRequiredWhiteCardCount;
+
     public Card(CardType cardType, JSONObject cardAsJSON) {
         try {
             initializeCard(cardType, cardAsJSON);
@@ -124,8 +124,7 @@ public class Card implements java.io.Serializable {
     public String getTextToDefine() {
         if (mPhraseToDefine.length() == 0) {
             // remove ____ and extra spaces
-            String returnText = mText.replaceAll(UNDERSCORES, "");
-            return returnText;
+            return mText.replaceAll(UNDERSCORES, "");
         } else {
             return mPhraseToDefine;
         }
@@ -151,8 +150,7 @@ public class Card implements java.io.Serializable {
         }
 
         String requestURL = String.format(url, Uri.encode(this.getTextToDefine()));
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(requestURL));
-        return browserIntent;
+        return new Intent(Intent.ACTION_VIEW, Uri.parse(requestURL));
     }
 
     public CharSequence getStyledStatement() {

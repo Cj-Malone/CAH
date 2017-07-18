@@ -14,7 +14,6 @@
         android:ellipsize="none"
         android:gravity="center_horizontal"
         android:maxLines="100"
-        android:onClick="onWhiteForBlackClick"
         android:scrollHorizontally="false"
         android:textSize="20dp"
         android:textStyle="bold" />

@@ -20,7 +20,7 @@ import java.util.ArrayList;
  */
 public class SelectNextPlayerActivity extends ListActivity {
 
-    private static final String TAG = "SelectNextPlayerActivity";
+    private static final String TAG = "SelectNxtPlayerActivity";
 
     private ArrayAdapter<Player> mAdapter;
 
